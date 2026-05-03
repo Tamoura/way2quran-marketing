@@ -1,42 +1,23 @@
-name: Deploy to GitHub Pages
-
+# Deployment is handled by Vercel.
+# Connect this repository to a Vercel project:
+#   1. Go to https://vercel.com/new
+#   2. Import from GitHub: Tamoura/way2quran-marketing
+#   3. Root directory: apps/web
+#   4. Add environment variables (see apps/web/.env.example)
+#
+# Vercel auto-deploys:
+#   - main branch  → production URL
+#   - other branches → preview URL per commit
+#
+# This file is intentionally a comment-only placeholder so the
+# deploy.yml reference in README.md remains valid.
+name: Deploy (Vercel)
 on:
   push:
     branches: [main]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: false
-
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm run build
-        env:
-          NEXT_PUBLIC_BASE_PATH: /way2quran-marketing
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: apps/web/out
-
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Vercel handles deployment
+        run: echo "Deployment is managed by Vercel. See comments in this file for setup."
