@@ -1,28 +1,28 @@
 {
-  "name": "@w2q/web",
+  "name": "@way2quran/web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3100",
+    "dev": "next dev --port 3100",
     "build": "next build",
-    "start": "next start -p 3100",
-    "typecheck": "tsc --noEmit",
-    "lint": "next lint"
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "next": "^14",
-    "react": "^18",
-    "react-dom": "^18"
+    "next": "14.2.29",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10",
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.21",
     "eslint": "^8",
-    "eslint-config-next": "^14",
-    "postcss": "^8",
-    "tailwindcss": "^3",
-    "typescript": "^5"
+    "eslint-config-next": "14.2.29",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3"
   }
 }
